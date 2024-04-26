@@ -68,5 +68,9 @@ Explain the difference between the == and === operators.
 
 16.   Loops - in seperate file
 17.   Functions
+
+This function returns [2, 4, 6]. This is beacuse in the for loop each value of the input array [1,2,3] is passed to the callback function doSomething which returns a number multiplied by 2, so the resulting array consists of 2 * each of the numbers.  
+
+
 18.   separate file
 19.   Output
