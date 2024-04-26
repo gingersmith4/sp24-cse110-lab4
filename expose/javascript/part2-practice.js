@@ -24,3 +24,21 @@ for (property in statistics) {
 for (property in statistics) {
     console.log(`${statistics[property]}`);
 };
+
+function printNums () {
+    console.log(1); 
+    setTimeout (function() { console.log(2); }, 1000);
+    setTimeout (function() { console.log(3); }, 0);
+    console.log(4);
+}
+let answer = printNums();
+
+/*
+1
+4
+3
+2
+I'm surprised, I was expecting 1 3 4 2
+If delay 0 is used it means execute "immediately", or more accurately, 
+the next event cycle. https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+*/
