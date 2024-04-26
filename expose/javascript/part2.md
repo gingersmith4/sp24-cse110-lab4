@@ -53,13 +53,20 @@ H   | 3 + undefined | NaN | Not a number - can't add something that's not a numb
 
 Part| Input        | Output | Explanation
 ----|------------- |--------|------------
-A   | '2' > 1      | true   |
-B
+A   | '2' > 1      | true   | '2' is converted to a number
+B   | '2' < '12'    | false | the first character from the left string, 2, is greater than the first character from the right string, 1
+C   | 2 == '2'      | true | '2' is converted to a number
+D   | 2 === '2'     | false | strict equality so a string isn't equal to an int
+E   | true == 2     | false | for booleans 1 is true, 0 is false, and the other numbers don't have a boolean value
+F   | true === Boolean(2) | true | Boolean(2) returns true
 
 15.  Equals
+
 Explain the difference between the == and === operators.
 
-16.  Loops - in seperate file
-17.  Functions
-18.  separate file
-19.  Output
+`===` is a strict equality operator so it checks equality without type conversion. `==` does a regular equality check, so it returns true for 0 == false.
+
+16.   Loops - in seperate file
+17.   Functions
+18.   separate file
+19.   Output
